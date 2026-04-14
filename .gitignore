@@ -26,6 +26,7 @@ pnpm-debug.log*
 *.code-workspace
 .claude/
 .idea/
+CLAUDE.md
 
 # Fichiers locaux hors prod
 _disabled/
