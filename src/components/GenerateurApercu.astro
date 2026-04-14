@@ -1,0 +1,586 @@
+---
+// src/components/GenerateurApercu.astro
+---
+
+<div id="gen-apercu">
+
+  <!-- ── Étape 1 : Formulaire ── -->
+  <div id="step-form">
+    <div class="hero-ui">
+      <h2>Aperçu de votre futur site</h2>
+      <p>Entrez votre activité — l'IA génère une maquette visuelle personnalisée en quelques secondes.</p>
+    </div>
+
+    <!-- Activité -->
+    <div class="form-section">
+      <div class="input-row">
+        <input
+          type="text"
+          id="profession-input"
+          placeholder="Ex : restaurant, plombier, avocat..."
+          maxlength="100"
+          autocomplete="off"
+        />
+      </div>
+      <div class="examples">
+        <span class="pill" data-val="Restaurant gastronomique">🍽 Restaurant</span>
+        <span class="pill" data-val="Artisan plombier">🔧 Plombier</span>
+        <span class="pill" data-val="Cabinet dentaire">🦷 Dentiste</span>
+        <span class="pill" data-val="Coach sportif">💪 Coach</span>
+        <span class="pill" data-val="Boutique e-commerce bio">🌿 E-commerce</span>
+        <span class="pill" data-val="Agence immobilière">🏠 Immobilier</span>
+        <span class="pill" data-val="Photographe mariage">📷 Photographe</span>
+        <span class="pill" data-val="Auto-école">🚗 Auto-école</span>
+      </div>
+    </div>
+
+    <!-- Style de design -->
+    <div class="form-section">
+      <div class="section-label">Style de design</div>
+      <div class="style-grid" id="style-grid">
+        <button class="style-card active" data-style="auto">
+          <span class="style-icon">✨</span>
+          <span class="style-name">Auto</span>
+          <span class="style-desc">Choix IA selon votre activité</span>
+        </button>
+        <button class="style-card" data-style="moderne">
+          <span class="style-icon">◻</span>
+          <span class="style-name">Moderne & Épuré</span>
+          <span class="style-desc">Minimaliste, espaces généreux</span>
+        </button>
+        <button class="style-card" data-style="elegant">
+          <span class="style-icon">◈</span>
+          <span class="style-name">Élégant & Luxe</span>
+          <span class="style-desc">Serif, raffiné, haut de gamme</span>
+        </button>
+        <button class="style-card" data-style="audacieux">
+          <span class="style-icon">▲</span>
+          <span class="style-name">Audacieux & Coloré</span>
+          <span class="style-desc">Impactant, fort contraste</span>
+        </button>
+        <button class="style-card" data-style="nature">
+          <span class="style-icon">◉</span>
+          <span class="style-name">Naturel & Bio</span>
+          <span class="style-desc">Organique, doux, chaleureux</span>
+        </button>
+        <button class="style-card" data-style="tech">
+          <span class="style-icon">⬡</span>
+          <span class="style-name">Tech & Corporate</span>
+          <span class="style-desc">Précis, professionnel, structuré</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Palette de couleurs -->
+    <div class="form-section">
+      <div class="section-label">Palette de couleurs <span class="label-note">— ou laissez l'IA choisir</span></div>
+      <div class="palette-grid" id="palette-grid">
+        <button class="palette-card active" data-palette="auto" title="Automatique">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:linear-gradient(135deg,#7C3AED,#EC4899)"></span>
+          </div>
+          <span class="palette-name">Auto</span>
+        </button>
+        <button class="palette-card" data-palette="bleu" data-colors='["#1a56db","#e8f0fe","#3b82f6"]' title="Bleu Professionnel">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#1a56db"></span>
+            <span class="swatch" style="background:#e8f0fe"></span>
+            <span class="swatch" style="background:#3b82f6"></span>
+          </div>
+          <span class="palette-name">Bleu Pro</span>
+        </button>
+        <button class="palette-card" data-palette="violet" data-colors='["#7C3AED","#f5f0ff","#EC4899"]' title="Violet Créatif">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#7C3AED"></span>
+            <span class="swatch" style="background:#f5f0ff"></span>
+            <span class="swatch" style="background:#EC4899"></span>
+          </div>
+          <span class="palette-name">Violet</span>
+        </button>
+        <button class="palette-card" data-palette="vert" data-colors='["#059669","#ecfdf5","#34d399"]' title="Vert Nature">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#059669"></span>
+            <span class="swatch" style="background:#ecfdf5"></span>
+            <span class="swatch" style="background:#34d399"></span>
+          </div>
+          <span class="palette-name">Vert</span>
+        </button>
+        <button class="palette-card" data-palette="rouge" data-colors='["#dc2626","#fef2f2","#f97316"]' title="Rouge Énergie">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#dc2626"></span>
+            <span class="swatch" style="background:#fef2f2"></span>
+            <span class="swatch" style="background:#f97316"></span>
+          </div>
+          <span class="palette-name">Rouge</span>
+        </button>
+        <button class="palette-card" data-palette="noir" data-colors='["#1a1a1a","#f5f5f5","#6b7280"]' title="Noir Élégant">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#1a1a1a"></span>
+            <span class="swatch" style="background:#f0f0f0;border:1px solid #ddd"></span>
+            <span class="swatch" style="background:#6b7280"></span>
+          </div>
+          <span class="palette-name">Noir</span>
+        </button>
+        <button class="palette-card" data-palette="orange" data-colors='["#ea580c","#fff7ed","#fbbf24"]' title="Orange Chaleureux">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#ea580c"></span>
+            <span class="swatch" style="background:#fff7ed"></span>
+            <span class="swatch" style="background:#fbbf24"></span>
+          </div>
+          <span class="palette-name">Orange</span>
+        </button>
+        <button class="palette-card" data-palette="rose" data-colors='["#db2777","#fdf2f8","#f43f5e"]' title="Rose Luxe">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#db2777"></span>
+            <span class="swatch" style="background:#fdf2f8"></span>
+            <span class="swatch" style="background:#f43f5e"></span>
+          </div>
+          <span class="palette-name">Rose</span>
+        </button>
+        <button class="palette-card" data-palette="marine" data-colors='["#1e3a5f","#eff6ff","#0ea5e9"]' title="Bleu Marine">
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#1e3a5f"></span>
+            <span class="swatch" style="background:#eff6ff"></span>
+            <span class="swatch" style="background:#0ea5e9"></span>
+          </div>
+          <span class="palette-name">Marine</span>
+        </button>
+      </div>
+    </div>
+
+    <button id="gen-btn">Générer mon aperçu →</button>
+  </div>
+
+  <!-- ── Étape 2 : Chargement ── -->
+  <div id="step-loading" class="hidden">
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <p id="load-txt">Analyse de votre secteur...</p>
+      <small id="load-sub">L'IA conçoit votre site</small>
+    </div>
+  </div>
+
+  <!-- ── Étape 3 : Résultat ── -->
+  <div id="step-result" class="hidden">
+    <div class="toolbar">
+      <span id="result-title"></span>
+      <div class="view-btns">
+        <button class="vbtn active" id="btn-desktop">🖥 Desktop</button>
+        <button class="vbtn" id="btn-mobile">📱 Mobile</button>
+      </div>
+    </div>
+
+    <div class="frame-wrap" id="frame-wrap">
+      <iframe id="preview-frame" title="Aperçu du site" sandbox="allow-scripts"></iframe>
+    </div>
+
+    <div class="meta-row" id="meta-row"></div>
+
+    <div class="cta-bar">
+      <p>Ce site vous correspond ? Julien Marsan vous accompagne pour le réaliser.</p>
+      <a href="/contact" class="cta-btn">Demander un devis →</a>
+    </div>
+
+    <button class="reset-btn" id="reset-btn">← Générer un autre aperçu</button>
+  </div>
+
+  <!-- ── Message d'erreur ── -->
+  <div id="step-error" class="hidden">
+    <div class="error-box">
+      <p id="error-msg">Une erreur est survenue.</p>
+      <button id="retry-btn">Réessayer</button>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  #gen-apercu {
+    font-family: system-ui, sans-serif;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hidden { display: none !important; }
+
+  /* ── Formulaire ── */
+  .hero-ui { text-align: center; margin-bottom: 2rem; }
+  .hero-ui h2 { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem; }
+  .hero-ui p  { font-size: 1rem; color: #666; }
+
+  .form-section { margin-bottom: 2rem; }
+
+  .section-label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .label-note { font-weight: 400; text-transform: none; letter-spacing: 0; color: #999; }
+
+  .input-row { display: flex; gap: 10px; margin-bottom: 1rem; }
+  .input-row input {
+    flex: 1; padding: 12px 16px; border: 1.5px solid #ddd;
+    border-radius: 8px; font-size: 15px; outline: none;
+    transition: border-color .2s;
+  }
+  .input-row input:focus { border-color: #7C3AED; }
+
+  .examples { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    font-size: 13px; padding: 6px 14px; border-radius: 20px;
+    border: 1px solid #ddd; background: #f5f5f3; color: #555;
+    cursor: pointer; transition: background .15s;
+  }
+  .pill:hover { background: #e8e8e5; color: #222; }
+
+  /* ── Style cards ── */
+  .style-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .style-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 14px 16px;
+    background: #fafafa;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .style-card:hover { border-color: #7C3AED; background: #faf8ff; }
+  .style-card.active {
+    border-color: #7C3AED;
+    background: #faf8ff;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+  }
+  .style-icon { font-size: 18px; line-height: 1; color: #7C3AED; margin-bottom: 2px; }
+  .style-name { font-size: 13px; font-weight: 700; color: #1a1a1a; }
+  .style-desc { font-size: 11px; color: #888; line-height: 1.4; }
+
+  /* ── Palette ── */
+  .palette-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .palette-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    background: #fafafa;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    min-width: 72px;
+  }
+  .palette-card:hover { border-color: #7C3AED; }
+  .palette-card.active {
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+  }
+
+  .palette-swatches {
+    display: flex;
+    gap: 3px;
+  }
+  .swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
+  }
+  .palette-name { font-size: 11px; font-weight: 600; color: #555; }
+
+  /* ── Bouton génération ── */
+  #gen-btn {
+    width: 100%;
+    padding: 14px 24px;
+    background: #7C3AED;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .15s;
+    margin-top: 8px;
+  }
+  #gen-btn:hover { background: #6d28d9; transform: translateY(-1px); }
+  #gen-btn:disabled { background: #b39ddb; cursor: not-allowed; transform: none; }
+
+  /* ── Chargement ── */
+  .loading-box { text-align: center; padding: 3rem 0; }
+  .spinner {
+    width: 36px; height: 36px; border: 3px solid #eee;
+    border-top-color: #7C3AED; border-radius: 50%;
+    animation: spin .8s linear infinite; margin: 0 auto 1rem;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-box p    { font-size: 15px; color: #555; }
+  .loading-box small { font-size: 13px; color: #aaa; }
+
+  /* ── Résultat ── */
+  .toolbar {
+    display: flex; align-items: center;
+    justify-content: space-between; margin-bottom: 10px;
+    flex-wrap: wrap; gap: 8px;
+  }
+  .toolbar span { font-size: 14px; color: #555; font-weight: 500; }
+  .view-btns { display: flex; gap: 6px; }
+  .vbtn {
+    font-size: 12px; padding: 5px 12px; border-radius: 6px;
+    border: 1px solid #ddd; background: #f5f5f3; color: #555;
+    cursor: pointer;
+  }
+  .vbtn.active { background: #e8f0fe; color: #1a73e8; border-color: #c3d5fa; }
+
+  .frame-wrap {
+    border: 1px solid #e0e0e0; border-radius: 12px;
+    overflow: hidden; transition: max-width .3s, margin .3s;
+  }
+  .frame-wrap.mobile { max-width: 375px; margin: 0 auto; border-radius: 24px; }
+  #preview-frame { width: 100%; height: 620px; border: none; display: block; }
+  .frame-wrap.mobile #preview-frame { height: 700px; }
+
+  .meta-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .meta-card {
+    flex: 1; min-width: 120px; background: #f9f9f7;
+    border-radius: 8px; padding: 12px 14px;
+  }
+  .meta-card-label { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+  .meta-card-value { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .meta-card-note  { font-size: 11px; color: #aaa; margin-top: 2px; }
+
+  .cta-bar {
+    background: #f0f6ff; border-radius: 10px;
+    padding: 16px 20px; display: flex; align-items: center;
+    justify-content: space-between; gap: 12px;
+    flex-wrap: wrap; margin-top: 12px;
+  }
+  .cta-bar p { font-size: 14px; color: #444; }
+  .cta-btn {
+    background: #7C3AED; color: #fff; padding: 10px 22px;
+    border-radius: 8px; font-size: 14px; font-weight: 600;
+    text-decoration: none; white-space: nowrap;
+  }
+  .cta-btn:hover { background: #6d28d9; }
+
+  .reset-btn {
+    background: none; border: none; font-size: 13px;
+    color: #999; cursor: pointer; text-decoration: underline;
+    margin-top: 8px; display: block;
+  }
+
+  /* ── Erreur ── */
+  .error-box {
+    background: #fff0f0; border: 1px solid #fcc;
+    border-radius: 10px; padding: 20px; text-align: center;
+  }
+  .error-box p { color: #c00; font-size: 14px; margin-bottom: 12px; }
+  .error-box button {
+    background: #7C3AED; color: #fff; padding: 8px 20px;
+    border: none; border-radius: 6px; font-size: 14px; cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .style-grid { grid-template-columns: repeat(2, 1fr); }
+    .palette-grid { gap: 8px; }
+    .palette-card { min-width: 60px; padding: 8px 10px; }
+  }
+</style>
+
+<script>
+  import { buildPreviewHTML } from "../lib/buildPreview";
+  import type { PreviewData } from "../lib/buildPreview";
+
+  // ── Éléments DOM ──────────────────────────────────────────────────────────
+  const stepForm    = document.getElementById("step-form")!;
+  const stepLoading = document.getElementById("step-loading")!;
+  const stepResult  = document.getElementById("step-result")!;
+  const stepError   = document.getElementById("step-error")!;
+
+  const input       = document.getElementById("profession-input") as HTMLInputElement;
+  const genBtn      = document.getElementById("gen-btn") as HTMLButtonElement;
+  const loadTxt     = document.getElementById("load-txt")!;
+  const loadSub     = document.getElementById("load-sub")!;
+  const resultTitle = document.getElementById("result-title")!;
+  const frameWrap   = document.getElementById("frame-wrap")!;
+  const iframe      = document.getElementById("preview-frame") as HTMLIFrameElement;
+  const metaRow     = document.getElementById("meta-row")!;
+  const errorMsg    = document.getElementById("error-msg")!;
+  const retryBtn    = document.getElementById("retry-btn")!;
+  const resetBtn    = document.getElementById("reset-btn")!;
+  const btnD        = document.getElementById("btn-desktop")!;
+  const btnM        = document.getElementById("btn-mobile")!;
+
+  // ── État des sélections ───────────────────────────────────────────────────
+  let selectedStyle   = "auto";
+  let selectedPalette = "auto";
+  let selectedColors: string[] | null = null;
+
+  // ── Style cards ───────────────────────────────────────────────────────────
+  document.querySelectorAll<HTMLElement>(".style-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      document.querySelectorAll(".style-card").forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+      selectedStyle = card.dataset.style ?? "auto";
+    });
+  });
+
+  // ── Palette cards ─────────────────────────────────────────────────────────
+  document.querySelectorAll<HTMLElement>(".palette-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      document.querySelectorAll(".palette-card").forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+      selectedPalette = card.dataset.palette ?? "auto";
+      const raw = card.dataset.colors;
+      selectedColors = raw ? JSON.parse(raw) : null;
+    });
+  });
+
+  // ── Messages de chargement ────────────────────────────────────────────────
+  const LOAD_MSGS = [
+    ["Analyse du secteur d'activité...", "Identification des besoins"],
+    ["Application du style choisi...", "Définition des couleurs et typographies"],
+    ["Génération du design...", "Mise en place de la structure"],
+    ["Création de la maquette...", "Finalisation de votre aperçu"],
+  ];
+
+  // ── Exemples rapides ──────────────────────────────────────────────────────
+  document.querySelectorAll<HTMLElement>(".pill").forEach((pill) => {
+    pill.addEventListener("click", () => {
+      input.value = pill.dataset.val ?? "";
+      generate();
+    });
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") generate();
+  });
+
+  genBtn.addEventListener("click", generate);
+  retryBtn.addEventListener("click", () => showStep("form"));
+  resetBtn.addEventListener("click", () => {
+    input.value = "";
+    showStep("form");
+  });
+
+  btnD.addEventListener("click", () => setView("desktop"));
+  btnM.addEventListener("click", () => setView("mobile"));
+
+  // ── Affichage des étapes ──────────────────────────────────────────────────
+  function showStep(step: "form" | "loading" | "result" | "error") {
+    stepForm.classList.toggle("hidden", step !== "form");
+    stepLoading.classList.toggle("hidden", step !== "loading");
+    stepResult.classList.toggle("hidden", step !== "result");
+    stepError.classList.toggle("hidden", step !== "error");
+  }
+
+  // ── Bascule desktop / mobile ──────────────────────────────────────────────
+  function setView(v: "desktop" | "mobile") {
+    frameWrap.classList.toggle("mobile", v === "mobile");
+    iframe.style.height = v === "mobile" ? "700px" : "620px";
+    btnD.classList.toggle("active", v === "desktop");
+    btnM.classList.toggle("active", v === "mobile");
+  }
+
+  // ── Génération principale ─────────────────────────────────────────────────
+  async function generate() {
+    const profession = input.value.trim();
+    if (!profession) { input.focus(); return; }
+
+    genBtn.disabled = true;
+    showStep("loading");
+
+    let msgIdx = 0;
+    const interval = setInterval(() => {
+      const [t, s] = LOAD_MSGS[Math.min(msgIdx++, LOAD_MSGS.length - 1)];
+      loadTxt.textContent = t;
+      loadSub.textContent = s;
+    }, 1800);
+
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          profession,
+          style: selectedStyle,
+          palette: selectedColors,
+        }),
+      });
+
+      clearInterval(interval);
+
+      if (res.status === 429) {
+        showError("Trop de générations. Réessayez dans 1 heure.");
+        return;
+      }
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        showError((err as { error?: string }).error ?? "Erreur serveur. Réessayez.");
+        return;
+      }
+
+      const json = await res.json() as { data: PreviewData };
+      const data = json.data;
+
+      // Applique la palette choisie par l'utilisateur si définie
+      if (selectedColors) {
+        data.couleur_principale = selectedColors[0];
+        data.couleur_secondaire = selectedColors[1];
+        data.couleur_accent     = selectedColors[2];
+      }
+
+      iframe.srcdoc = buildPreviewHTML(data, selectedStyle);
+      resultTitle.textContent = `Aperçu — ${data.nom}`;
+
+      metaRow.innerHTML = `
+        <div class="meta-card">
+          <div class="meta-card-label">Budget estimé</div>
+          <div class="meta-card-value">${data.budget_min.toLocaleString("fr-FR")}€ – ${data.budget_max.toLocaleString("fr-FR")}€</div>
+          <div class="meta-card-note">TVA non incluse</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-card-label">Type de site</div>
+          <div class="meta-card-value" style="font-size:14px;padding-top:3px">${data.type_site}</div>
+          <div class="meta-card-note">${profession}</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-card-label">Style appliqué</div>
+          <div class="meta-card-value" style="font-size:14px;padding-top:3px">${selectedStyle === "auto" ? "Adapté au secteur" : selectedStyle.charAt(0).toUpperCase() + selectedStyle.slice(1)}</div>
+          <div class="meta-card-note">Délai : 2 – 4 semaines</div>
+        </div>
+      `;
+
+      showStep("result");
+    } catch (err) {
+      clearInterval(interval);
+      console.error(err);
+      showError("Erreur réseau. Vérifiez votre connexion et réessayez.");
+    } finally {
+      genBtn.disabled = false;
+    }
+  }
+
+  function showError(msg: string) {
+    errorMsg.textContent = msg;
+    showStep("error");
+  }
+</script>

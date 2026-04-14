@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Mentions légales"
+  description="Mentions légales de WebGraphicDesign, agence web et design graphique à Salles sur l'Hers."
+>
+  <section class="legal-section">
+    <div class="container">
+      <div class="legal-inner">
+        <h1>Mentions légales</h1>
+        <p class="legal-date">Dernière mise à jour : mars 2026</p>
+
+        <div class="legal-block">
+          <h2>1. Éditeur du site</h2>
+          <p>Le site <strong>webgraphicdesign.fr</strong> est édité par :</p>
+          <ul>
+            <li><strong>Raison sociale :</strong> WebGraphicDesign</li>
+            <li><strong>Statut :</strong> Auto-entrepreneur</li>
+            <li><strong>Adresse :</strong> Salles sur l'Hers, 11400</li>
+            <li><strong>Téléphone :</strong> <a href="tel:+33781041953">+33 7 81 04 19 53</a></li>
+            <li><strong>Email :</strong> <a href="mailto:contact@webgraphicdesign.fr">contact@webgraphicdesign.fr</a></li>
+            <li><strong>SIRET :</strong> [À compléter]</li>
+            <li><strong>Numéro TVA intracommunautaire :</strong> Non assujetti à TVA (franchise en base de TVA, art. 293 B du CGI)</li>
+          </ul>
+        </div>
+
+        <div class="legal-block">
+          <h2>2. Directeur de la publication</h2>
+          <p>Le directeur de la publication est le responsable de WebGraphicDesign, joignable à l'adresse <a href="mailto:contact@webgraphicdesign.fr">contact@webgraphicdesign.fr</a>.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2>3. Hébergement</h2>
+          <p>Le site est hébergé par :</p>
+          <ul>
+            <li><strong>Hébergeur :</strong> [À compléter — ex : OVH, Vercel, Netlify…]</li>
+            <li><strong>Adresse :</strong> [À compléter]</li>
+          </ul>
+        </div>
+
+        <div class="legal-block">
+          <h2>4. Propriété intellectuelle</h2>
+          <p>L'ensemble des contenus présents sur ce site (textes, images, graphismes, logo, icônes, etc.) est la propriété exclusive de WebGraphicDesign, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de WebGraphicDesign.</p>
+          <p>Toute exploitation non autorisée du site ou de son contenu sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2>5. Limitation de responsabilité</h2>
+          <p>WebGraphicDesign s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, WebGraphicDesign ne peut garantir l'exactitude, la complétude ou l'actualité des informations diffusées. En conséquence, l'utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.</p>
+          <p>WebGraphicDesign ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès au site ou de l'utilisation des informations qu'il contient.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2>6. Liens hypertextes</h2>
+          <p>Le site peut contenir des liens vers d'autres sites internet. WebGraphicDesign n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2>7. Droit applicable</h2>
+          <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux français seront compétents.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2>8. Contact</h2>
+          <p>Pour toute question relative aux présentes mentions légales, vous pouvez me contacter :</p>
+          <ul>
+            <li>Par email : <a href="mailto:contact@webgraphicdesign.fr">contact@webgraphicdesign.fr</a></li>
+            <li>Par téléphone : <a href="tel:+33781041953">+33 7 81 04 19 53</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-section {
+    padding: 80px 0 100px;
+    background: var(--white);
+  }
+
+  .legal-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: 8px;
+  }
+
+  .legal-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 56px;
+  }
+
+  .legal-block {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .legal-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    padding-left: 16px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  a:hover { color: var(--primary-dark, #6d28d9); }
+</style>

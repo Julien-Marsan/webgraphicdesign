@@ -1,0 +1,35 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# Astro
+.astro/
+
+# IDE / workspace
+.vscode/
+*.code-workspace
+.claude/
+.idea/
+
+# Fichiers locaux hors prod
+_disabled/
+*.zip
+
+# OS
+Thumbs.db

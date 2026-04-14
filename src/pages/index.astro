@@ -1,0 +1,960 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Accueil"
+  description="Agence web et design graphique à Salles sur l'Hers. Sites WordPress, WooCommerce, identité visuelle et supports print. Devis gratuit."
+>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Left content -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            Agence Digitale · Salles sur l'Hers
+          </div>
+          <h1>
+            Attirez plus<br/>
+            <span class="text-gradient">de clients avec un site web performant.</span>
+          </h1>
+          <p class="hero-desc">
+            Des sites web performants, des identités visuelles mémorables et des supports print qui marquent les esprits. Basé à Salles sur l'Hers, près de Villefranche de Lauragais.
+          </p>
+          <div class="hero-actions">
+            <a href="/services" class="btn btn-primary">
+              Mes services
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a href="/contact" class="btn btn-outline">Devis gratuit</a>
+          </div>
+          <!-- Trust badges -->
+          <div class="hero-badges">
+            <div class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FBBF24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>5.0 Google Reviews</span>
+            </div>
+            <div class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>SEO Optimisé</span>
+            </div>
+            <div class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Livraison Rapide</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right visual -->
+        <div class="hero-visual">
+          <div class="hero-mockup-wrap">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <div class="browser-url">webgraphicdesign.fr</div>
+              </div>
+              <div class="browser-content">
+                <div class="mock-nav"></div>
+                <div class="mock-hero">
+                  <div class="mock-hero-text">
+                    <div class="mock-line wide"></div>
+                    <div class="mock-line medium"></div>
+                    <div class="mock-line short"></div>
+                    <div class="mock-btn"></div>
+                  </div>
+                  <div class="mock-hero-img"></div>
+                </div>
+                <div class="mock-cards">
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating chips -->
+            <div class="chip chip-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#21759B"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+              WordPress
+            </div>
+            <div class="chip chip-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#7C3AED"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Intelligence Artificielle
+            </div>
+            <div class="chip chip-3">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#EC4899"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              SEO
+            </div>
+            <div class="floating-stat">
+              <span class="stat-num">+100</span>
+              <span class="stat-lab">Projets</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APERÇU IA ===================== -->
+  <section class="apercu-section" hidden style="display:none">
+    <div class="container">
+      <div class="apercu-inner" data-animate>
+        <div class="apercu-left">
+          <div class="apercu-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#7C3AED"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Nouveauté — Propulsé par l'IA
+          </div>
+          <h2>Visualisez votre futur site<br/><span class="text-gradient">avant même de me contacter</span></h2>
+          <p>Entrez simplement votre activité et mon outil génère en quelques secondes un aperçu visuel personnalisé de votre futur site web — avec une estimation de budget. Gratuit, sans inscription.</p>
+          <ul class="apercu-benefits">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Aperçu personnalisé selon votre secteur
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Estimation de budget instantanée
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              100% gratuit — résultat en quelques secondes
+            </li>
+          </ul>
+          <a href="/apercu" class="btn-apercu-main">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Générer mon aperçu gratuit
+          </a>
+        </div>
+        <div class="apercu-right">
+          <div class="apercu-card">
+            <div class="apercu-card-header">
+              <span class="apercu-card-tag">Votre activité</span>
+              <div class="apercu-input-mock">Boulangerie artisanale à Toulouse…</div>
+            </div>
+            <div class="apercu-card-result">
+              <div class="apercu-result-bar"></div>
+              <div class="apercu-result-lines">
+                <div class="apercu-line w80"></div>
+                <div class="apercu-line w60"></div>
+              </div>
+              <div class="apercu-result-blocks">
+                <div class="apercu-block"></div>
+                <div class="apercu-block"></div>
+                <div class="apercu-block"></div>
+              </div>
+            </div>
+            <div class="apercu-card-footer">
+              <div class="apercu-budget">
+                <span class="apercu-budget-label">Estimation budget</span>
+                <span class="apercu-budget-value">800 € – 1 500 €</span>
+              </div>
+              <div class="apercu-ai-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#7C3AED"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Généré par IA
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Ce que je propose</span>
+        <h2>Mes Services</h2>
+        <p>Des solutions numériques et visuelles complètes pour aider votre entreprise à se démarquer et prospérer dans le monde digital.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Site Web -->
+        <a href="/services#web" class="service-card" data-animate data-animate-delay="1">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="service-content">
+            <h3>Site Web</h3>
+            <p>Sites WordPress sur mesure, boutiques WooCommerce performantes et solutions SEO pour maximiser votre visibilité en ligne.</p>
+            <ul class="service-tags">
+              <li>WordPress</li>
+              <li>WooCommerce</li>
+              <li>SEO</li>
+            </ul>
+          </div>
+          <div class="service-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <!-- Design -->
+        <a href="/services#design" class="service-card featured" data-animate data-animate-delay="2">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="3.5"/><circle cx="6.5" cy="15.5" r="3.5"/><circle cx="17" cy="17" r="3"/><line x1="13.5" y1="10" x2="6.5" y2="12"/></svg>
+          </div>
+          <div class="service-content">
+            <h3>Design Graphique</h3>
+            <p>Identité visuelle percutante, logo mémorable, charte graphique complète et éléments visuels qui racontent votre histoire.</p>
+            <ul class="service-tags">
+              <li>Logo</li>
+              <li>Identité visuelle</li>
+              <li>Branding</li>
+            </ul>
+          </div>
+          <div class="service-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <!-- Print -->
+        <a href="/services#print" class="service-card" data-animate data-animate-delay="3">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </div>
+          <div class="service-content">
+            <h3>Supports Print</h3>
+            <p>Flyers, affiches, brochures, cartes de visite et tous vos supports de communication imprimés, conçus avec soin.</p>
+            <ul class="service-tags">
+              <li>Flyers</li>
+              <li>Brochures</li>
+              <li>Cartes de visite</li>
+            </ul>
+          </div>
+          <div class="service-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="services-cta" data-animate>
+        <a href="/services" class="btn btn-ghost">
+          Voir tous mes services
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-animate>
+          <span class="stat-number">+100</span>
+          <span class="stat-label">Projets réalisés</span>
+        </div>
+        <div class="stat-item" data-animate data-animate-delay="1">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Clients satisfaits</span>
+        </div>
+        <div class="stat-item" data-animate data-animate-delay="2">
+          <span class="stat-number">+15</span>
+          <span class="stat-label">Ans d'expérience</span>
+        </div>
+        <div class="stat-item" data-animate data-animate-delay="3">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support client</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about-section">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-visual" data-animate>
+          <div class="about-image-wrap">
+            <img src="/projet-occitanie-btp.svg" alt="Projet Occitanie BTP" class="about-image" />
+            <!-- Floating card -->
+            <div class="about-float-card">
+              <div class="float-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Projet livré</strong>
+                <span>Site Vitrine · Près de Castelnaudary</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content" data-animate data-animate-delay="2">
+          <span class="section-tag">Qui suis-je</span>
+          <h2>Passionné par le<br/><span class="text-gradient">Design & le Code</span></h2>
+          <div class="divider"></div>
+          <p>
+            Moi, c'est Julien. Je crois que votre présence en ligne doit être aussi unique que votre entreprise. Webdesigner et webmaster senior avec plus de 15 ans d'expérience, je crée des expériences numériques sur mesure qui allient esthétique et performance.
+          </p>
+          <p style="margin-top: 16px;">
+            Du concept initial au lancement final, je transforme votre vision en réalité avec les meilleures technologies web actuelles. Basé près de Villefranche de Lauragais, j'accompagne des entreprises de toutes tailles dans leur développement digital.
+          </p>
+          <div class="about-values">
+            <div class="value-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Conception sur mesure</span>
+            </div>
+            <div class="value-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Performance & SEO optimisés</span>
+            </div>
+            <div class="value-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Accompagnement continu</span>
+            </div>
+            <div class="value-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Délais respectés</span>
+            </div>
+          </div>
+          <a href="/a-propos" class="btn btn-primary" style="margin-top: 8px;">
+            En savoir plus
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner" data-animate>
+        <div class="cta-content">
+          <h2>Prêt à démarrer votre projet ?</h2>
+          <p>Dites-moi ce que vous imaginez, je le crée. Devis gratuit sous 24h.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn-white">
+            Me contacter
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="tel:+33781041953" class="btn" style="color:rgba(255,255,255,0.8); border: 2px solid rgba(255,255,255,0.25);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Appeler directement
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ========= HERO ========= */
+  .hero {
+    padding: 100px 0 80px;
+    background: linear-gradient(145deg, #fafbff 0%, #f5f0ff 40%, #fdf2f8 100%);
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(124,58,237,0.08);
+    padding: 7px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .hero-tag .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero-content h1 { margin-bottom: 24px; }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  /* ========= APERÇU IA ========= */
+  .apercu-section {
+    padding: var(--section-py) 0;
+    background: linear-gradient(145deg, #0f0a1e 0%, #1a0533 50%, #0f0a1e 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .apercu-section::before {
+    content: '';
+    position: absolute;
+    top: -150px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 400px;
+    background: radial-gradient(ellipse, rgba(124,58,237,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .apercu-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+    position: relative;
+  }
+
+  .apercu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #a78bfa;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.3);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .apercu-left h2 {
+    color: white;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .apercu-left p {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+
+  .apercu-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .apercu-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .btn-apercu-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gradient);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px 32px;
+    border-radius: 100px;
+    box-shadow: 0 6px 24px rgba(124,58,237,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-apercu-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(124,58,237,0.6);
+    color: white;
+  }
+
+  /* Aperçu card mockup */
+  .apercu-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .apercu-card-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .apercu-card-tag {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a78bfa;
+    margin-bottom: 10px;
+  }
+  .apercu-input-mock {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+  }
+
+  .apercu-card-result {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .apercu-result-bar {
+    height: 28px;
+    background: rgba(124,58,237,0.4);
+    border-radius: 6px;
+  }
+  .apercu-result-lines { display: flex; flex-direction: column; gap: 8px; }
+  .apercu-line { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); }
+  .apercu-line.w80 { width: 80%; }
+  .apercu-line.w60 { width: 60%; }
+  .apercu-result-blocks { display: flex; gap: 10px; margin-top: 4px; }
+  .apercu-block { flex: 1; height: 56px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); }
+
+  .apercu-card-footer {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .apercu-budget-label { display: block; font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-bottom: 3px; }
+  .apercu-budget-value { font-size: 1.1rem; font-weight: 800; color: white; }
+  .apercu-ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #a78bfa;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.25);
+    padding: 6px 12px;
+    border-radius: 100px;
+  }
+
+  @media (max-width: 1024px) {
+    .apercu-inner { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: white;
+    border: 1px solid var(--border);
+    padding: 7px 14px;
+    border-radius: 100px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Hero Visual */
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .hero-mockup-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .browser-mockup {
+    width: 100%;
+    max-width: 520px;
+    background: var(--dark-2);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 32px 64px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.05);
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .browser-bar .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .browser-bar .dot.red { background: #FF5F56; }
+  .browser-bar .dot.yellow { background: #FFBD2E; }
+  .browser-bar .dot.green { background: #27C93F; }
+  .browser-url {
+    flex: 1;
+    background: rgba(255,255,255,0.07);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-left: 8px;
+  }
+
+  .browser-content { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+
+  .mock-nav {
+    height: 32px;
+    background: rgba(124,58,237,0.5);
+    border-radius: 6px;
+  }
+  .mock-hero {
+    display: flex;
+    gap: 12px;
+    height: 100px;
+  }
+  .mock-hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+  }
+  .mock-hero-img {
+    width: 90px;
+    background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(236,72,153,0.3));
+    border-radius: 8px;
+  }
+  .mock-line { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.15); }
+  .mock-line.wide { width: 90%; }
+  .mock-line.medium { width: 65%; }
+  .mock-line.short { width: 40%; }
+  .mock-btn { height: 24px; width: 80px; background: rgba(124,58,237,0.5); border-radius: 4px; margin-top: 4px; }
+  .mock-cards { display: flex; gap: 8px; }
+  .mock-card { flex: 1; height: 64px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+
+  /* Chips */
+  .chip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text);
+    box-shadow: var(--shadow-lg);
+    white-space: nowrap;
+  }
+  .chip-1 { top: -20px; left: -20px; animation: float 4s ease-in-out infinite 0.5s; }
+  .chip-2 { bottom: 40px; left: -30px; animation: float 5s ease-in-out infinite 1s; }
+  .chip-3 { top: 30px; right: -20px; animation: float 4.5s ease-in-out infinite 1.5s; }
+
+  .floating-stat {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background: var(--gradient);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow-primary);
+    animation: float 6s ease-in-out infinite;
+  }
+  .floating-stat .stat-num { font-size: 1.5rem; font-weight: 800; color: white; line-height: 1; }
+  .floating-stat .stat-lab { font-size: 0.75rem; color: rgba(255,255,255,0.8); font-weight: 500; }
+
+  /* ========= SERVICES ========= */
+  .section { padding: var(--section-py) 0; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 36px 32px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+    z-index: 0;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: transparent;
+  }
+  .service-card:hover::before { opacity: 1; }
+  .service-card:hover .service-icon,
+  .service-card:hover .service-content h3,
+  .service-card:hover .service-content p,
+  .service-card:hover .service-arrow { color: white; }
+  .service-card:hover .service-icon { background: rgba(255,255,255,0.15); }
+  .service-card:hover .service-tags li { background: rgba(255,255,255,0.15); color: white; }
+  .service-card:hover .service-arrow { background: rgba(255,255,255,0.15); }
+  .service-card > * { position: relative; z-index: 1; }
+
+  .service-card.featured {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+  }
+
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius);
+    background: rgba(124,58,237,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+  }
+
+  .service-content { flex: 1; }
+  .service-content h3 { margin-bottom: 10px; font-size: 1.25rem; transition: color 0.3s; }
+  .service-content p { font-size: 0.9rem; line-height: 1.7; transition: color 0.3s; }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .service-tags li {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--surface);
+    color: var(--text-muted);
+    transition: all 0.3s;
+  }
+
+  .service-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    margin-top: 24px;
+    align-self: flex-end;
+    transition: all 0.3s;
+  }
+
+  .services-cta { text-align: center; }
+
+  /* ========= STATS ========= */
+  .stats-section {
+    padding: 80px 0;
+    background: var(--dark);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-label {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* ========= ABOUT ========= */
+  .about-section { background: var(--surface); }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-image-wrap {
+    position: relative;
+  }
+  .about-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    display: block;
+  }
+
+  .about-float-card {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-xl);
+    min-width: 220px;
+  }
+  .float-icon {
+    width: 36px; height: 36px;
+    border-radius: var(--radius-sm);
+    background: rgba(124,58,237,0.08);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .about-float-card strong { display: block; font-size: 0.875rem; font-weight: 700; color: var(--text); }
+  .about-float-card span { font-size: 0.75rem; color: var(--text-muted); }
+
+  .about-content h2 { margin: 8px 0 0; }
+  .about-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0 32px;
+  }
+  .value-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  /* ========= CTA BANNER ========= */
+  .cta-banner {
+    padding: 80px 0;
+    background: var(--gradient);
+  }
+
+  .cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .cta-content h2 {
+    color: white;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+  }
+  .cta-content p {
+    color: rgba(255,255,255,0.8);
+    margin-top: 8px;
+    font-size: 1.05rem;
+  }
+
+  .cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
+
+  /* ========= RESPONSIVE ========= */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { max-width: 500px; margin: 0 auto; }
+    .chip-1, .chip-2, .chip-3 { display: none; }
+    .services-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto 48px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .stat-item:nth-child(2n) { border-right: none; }
+    .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 72px 0 60px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .cta-inner { flex-direction: column; text-align: center; }
+    .cta-actions { justify-content: center; }
+    .about-float-card { display: none; }
+    .about-values { grid-template-columns: 1fr; }
+  }
+</style>

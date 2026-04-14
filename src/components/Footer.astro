@@ -1,0 +1,223 @@
+---
+const year = new Date().getFullYear();
+
+const services = [
+  { href: '/services#web', label: 'Création de sites web' },
+  { href: '/services#ecommerce', label: 'Boutiques WooCommerce' },
+  { href: '/services#seo', label: 'Optimisation SEO' },
+  { href: '/services#design', label: 'Design Graphique' },
+  { href: '/services#print', label: 'Supports Print' },
+  { href: '/services#branding', label: 'Identité Visuelle' },
+];
+
+const company = [
+  { href: '/', label: 'Accueil' },
+  { href: '/a-propos', label: 'À propos' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <div class="logo-mark">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <rect width="28" height="28" rx="7" fill="url(#flg)"/>
+              <path d="M7 9l3.5 10 3.5-7 3.5 7L21 9" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="flg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#7C3AED"/>
+                  <stop offset="1" stop-color="#EC4899"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="logo-text">Web<strong>Graphic</strong>Design</span>
+        </a>
+        <p class="footer-desc">
+          Webdesigner et développeur freelance basé à Salles sur l'Hers, près de Villefranche de Lauragais. Je crée des expériences digitales sur mesure pour les entreprises ambitieuses.
+        </p>
+        <!-- Socials -->
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Services</h4>
+        <ul>
+          {services.map(s => (
+            <li><a href={s.href} class="footer-link">{s.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Entreprise</h4>
+        <ul>
+          {company.map(c => (
+            <li><a href={c.href} class="footer-link">{c.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="contact-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+33781041953">+33 7 81 04 19 53</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contact@webgraphicdesign.fr">contact@webgraphicdesign.fr</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Salles sur l'Hers<br/>près de Villefranche de Lauragais</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>© {year} WebGraphicDesign. Tous droits réservés.</p>
+      <div class="footer-legal">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/politique-confidentialite">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.65);
+    padding: 80px 0 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Brand */
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .footer-logo .logo-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+  }
+  .footer-logo .logo-text strong { color: var(--primary-light); }
+
+  .footer-desc {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.6);
+    transition: all 0.2s;
+  }
+  .social-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Columns */
+  .footer-col-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-link {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: rgba(255,255,255,0.9); }
+
+  /* Contact list */
+  .contact-list { display: flex; flex-direction: column; gap: 14px; }
+  .contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .contact-list li svg { flex-shrink: 0; margin-top: 2px; color: var(--primary-light); }
+  .contact-list a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+  .contact-list a:hover { color: rgba(255,255,255,0.9); }
+
+  /* Bottom */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.35);
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal a { color: rgba(255,255,255,0.35); transition: color 0.2s; }
+  .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+  @media (max-width: 1024px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+    .footer-brand { grid-column: auto; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+  }
+</style>

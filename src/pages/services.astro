@@ -1,0 +1,436 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const webServices = [
+  { name: 'Pack Présence', price: '99€', period: '/mois TTC', desc: 'Idéal pour lancer votre présence en ligne.', features: ['Site One Page jusqu\'à 5 pages', 'Design responsive sur mesure', 'Formulaire de contact', 'Intégration SEO de base', 'Optimisation de la vitesse', 'Certificat SSL inclus'] },
+  { name: 'Pack E-commerce', price: '149€', period: '/mois TTC', desc: 'Boutique WooCommerce complète et performante.', features: ['Boutique WooCommerce complète', 'Paiement sécurisé Stripe/Paypal', 'Gestion des stocks & commandes', 'Fiches produits illimitées', 'Tableau de bord analytique', 'Formation gestion boutique'], featured: true },
+  { name: 'Maintenance & Sérénité', price: '50€', period: '/mois TTC', desc: 'Votre site toujours à jour et sécurisé.', features: ['Mises à jour WordPress & Plugins', 'Sauvegardes quotidiennes', 'Surveillance sécurité 24/7', 'Modifications mineures incluses', 'Support prioritaire'] },
+];
+
+const designServices = [
+  { name: 'Identité Visuelle', price: '708€', period: '', desc: 'Tout ce dont vous avez besoin pour une marque cohérente.', features: ['Logo professionnel (3 propositions)', 'Charte graphique complète', 'Palette de couleurs & typographies', 'Fichiers sources (AI, EPS, PDF)', 'Version vectorielle & PNG', 'Bon marché, qualité premium'] },
+  { name: 'Supports de communication', price: 'Sur devis', period: '', desc: 'Création de vos visuels, cartes de visite, flyers, dépliants, tous vos supports de communication.', features: ['Cartes de visite', 'Flyers & dépliants', 'Affiches & kakémonos', 'Visuels réseaux sociaux', 'Plaquettes commerciales', 'Fichiers print prêts à imprimer'], featured: true },
+];
+
+const socialServices = [
+  { name: 'Google Business Profile', price: '250€', desc: 'Optimisez votre fiche Google pour attirer plus de clients locaux.', features: ['Création & validation de la fiche', 'Rédaction complète du profil', 'Ajout de photos professionnelles', 'Configuration des services', 'Lien vers votre site web', 'Rapport + conseils'] },
+  { name: 'Setup Réseaux Sociaux', price: '300€', desc: 'Configuration professionnelle de vos profils sociaux.', features: ['Facebook, Instagram, LinkedIn', 'Photos de profil & couverture', 'Biographies optimisées', 'Configuration messagerie', 'Templates publications (5 modèles)', 'Formation de prise en main'] },
+];
+
+const printServices = [
+  { name: 'Carte de visite', icon: '🪪', desc: 'Design professionnel recto/verso, fichiers print-ready.' },
+  { name: 'Flyers & Affiches', icon: '📄', desc: 'Formats A3 à A6, recto ou recto/verso selon vos besoins.' },
+  { name: 'Brochures & Catalogues', icon: '📖', desc: 'De 4 à 32 pages, cahier des charges respecté.' },
+  { name: 'Kakémono / Roll-up', icon: '🎯', desc: 'Pour vos salons, événements et points de vente.' },
+  { name: 'Papeterie d\'entreprise', icon: '✉️', desc: 'En-têtes, enveloppes, tampons, signatures email.' },
+  { name: 'Packaging', icon: '📦', desc: 'Boîtes, étiquettes et emballages personnalisés.' },
+];
+---
+
+<Layout
+  title="Services"
+  description="Découvrez tous mes services : création de sites web WordPress, WooCommerce, design graphique, identité visuelle et supports print à Salles sur l'Hers, près de Villefranche de Lauragais."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content" data-animate>
+        <span class="section-tag">Mes Services</span>
+        <h1>Des solutions <span class="text-gradient">complètes</span><br/>pour votre entreprise</h1>
+        <p>De la création de votre site web à votre identité visuelle en passant par vos supports print, je prends en charge l'ensemble de votre communication digitale et physique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SITE WEB ===================== -->
+  <section class="section" id="web">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Site Web</span>
+        <h2>Création Web<br/>& E-commerce</h2>
+        <p>Des sites performants, optimisés pour le référencement et adaptés à tous les écrans.</p>
+      </div>
+
+      <div class="pricing-grid">
+        {webServices.map((service, i) => (
+          <div class={`pricing-card ${service.featured ? 'featured' : ''}`} data-animate data-animate-delay={String(i + 1)}>
+            {service.featured && <div class="featured-badge">Populaire</div>}
+            <div class="pricing-header">
+              <h3>{service.name}</h3>
+              <p>{service.desc}</p>
+              <div class="pricing-price">
+                <span class="price-amount">{service.price}</span>
+                <span class="price-period">{service.period}</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              {service.features.map(f => (
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <a href="/contact" class={`btn ${service.featured ? 'btn-primary' : 'btn-outline'} pricing-btn`}>
+              Choisir ce pack
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <!-- Also: SEO & Custom dev -->
+      <div class="extra-services" data-animate>
+        <div class="extra-card" id="seo">
+          <div class="extra-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <h4>Optimisation SEO</h4>
+            <p>Audit, stratégie de mots-clés, optimisation on-page, netlinking et reporting mensuel. Remontez dans Google et attirez plus de clients organiquement.</p>
+          </div>
+          <a href="/contact" class="btn btn-ghost extra-cta">Devis personnalisé →</a>
+        </div>
+        <div class="extra-card" id="ecommerce">
+          <div class="extra-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <div>
+            <h4>Développement Personnalisé</h4>
+            <p>Fonctionnalités spécifiques, plugins sur mesure, intégrations API et extensions WooCommerce. Votre site adapté exactement à vos besoins métier.</p>
+          </div>
+          <a href="/contact" class="btn btn-ghost extra-cta">Devis personnalisé →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DESIGN ===================== -->
+  <section class="section surface-section" id="design">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Design Graphique</span>
+        <h2>Identité Visuelle & Branding</h2>
+        <p>Des designs qui racontent votre histoire et marquent les esprits durablement.</p>
+      </div>
+
+      <div class="pricing-grid pricing-grid--2">
+        {designServices.map((service, i) => (
+          <div class={`pricing-card ${service.featured ? 'featured' : ''}`} data-animate data-animate-delay={String(i + 1)}>
+            {service.featured && <div class="featured-badge">Best seller</div>}
+            <div class="pricing-header">
+              <h3>{service.name}</h3>
+              <p>{service.desc}</p>
+              <div class="pricing-price">
+                <span class="price-amount">{service.price}</span>
+                {service.period && <span class="price-period">{service.period}</span>}
+              </div>
+            </div>
+            <ul class="pricing-features">
+              {service.features.map(f => (
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <a href="/contact" class={`btn ${service.featured ? 'btn-primary' : 'btn-outline'} pricing-btn`}>
+              Commander ce pack
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <!-- Social Media services -->
+      <div class="social-services" data-animate>
+        <h3 class="social-title">Réseaux Sociaux & Visibilité</h3>
+        <p class="social-subtitle">Optimisez votre présence locale et sociale pour attirer plus de clients.</p>
+        <div class="social-grid">
+          {socialServices.map((s, i) => (
+            <div class="social-card" data-animate data-animate-delay={String(i + 1)}>
+              <div class="social-price">{s.price}<span class="price-note"> HT</span></div>
+              <h4>{s.name}</h4>
+              <p>{s.desc}</p>
+              <ul class="pricing-features mini">
+                {s.features.map(f => (
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact" class="btn btn-outline" style="margin-top: auto;">Commander</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRINT ===================== -->
+  <section class="section" id="print">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Supports Print</span>
+        <h2>Communication Imprimée</h2>
+        <p>Des supports de communication physiques qui renforcent votre identité et marquent vos prospects.</p>
+      </div>
+
+      <div class="print-grid">
+        {printServices.map((s, i) => (
+          <div class="print-card" data-animate data-animate-delay={String(i % 3 + 1)}>
+            <span class="print-icon">{s.icon}</span>
+            <h4>{s.name}</h4>
+            <p>{s.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="print-cta" data-animate>
+        <div class="print-cta-inner">
+          <div>
+            <h3>Besoin d'un devis print ?</h3>
+            <p>Chaque support est tarifé selon vos besoins spécifiques (format, quantité, finition). Contactez-moi pour un devis personnalisé gratuit et sans engagement.</p>
+          </div>
+          <a href="/contact" class="btn btn-primary">
+            Demander un devis
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner" data-animate>
+        <div class="cta-content">
+          <h2>Vous ne savez pas par où commencer ?</h2>
+          <p>Parlons de votre projet ensemble. Je vous guide vers la solution la plus adaptée.</p>
+        </div>
+        <a href="/contact" class="btn btn-white">
+          Prendre contact
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: 80px 0 64px;
+    background: linear-gradient(145deg, #fafbff 0%, #f5f0ff 60%, #fdf2f8 100%);
+    text-align: center;
+  }
+  .page-hero-content { max-width: 720px; margin: 0 auto; }
+  .page-hero-content h1 { margin: 12px 0 20px; font-size: clamp(2rem, 4vw, 3.25rem); }
+  .page-hero-content p { font-size: 1.1rem; max-width: 560px; margin: 0 auto; }
+
+  /* Sections */
+  .section { padding: var(--section-py) 0; }
+  .surface-section { background: var(--surface); }
+
+  /* Pricing Grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+    align-items: start;
+  }
+  .pricing-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    justify-content: center;
+  }
+
+  .pricing-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 36px 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: all 0.3s ease;
+  }
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+  .pricing-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15), var(--shadow-lg);
+    transform: scale(1.02);
+  }
+  .pricing-card.featured:hover { transform: scale(1.02) translateY(-4px); }
+
+  .featured-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .pricing-header { margin-bottom: 28px; }
+  .pricing-header h3 { font-size: 1.2rem; margin-bottom: 8px; }
+  .pricing-header p { font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px; }
+
+  .pricing-price { display: flex; align-items: baseline; gap: 4px; }
+  .price-amount {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+  }
+  .pricing-card.featured .price-amount { color: var(--primary); }
+  .price-period { font-size: 0.875rem; color: var(--text-muted); font-weight: 500; }
+
+  .pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex: 1;
+  }
+  .pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .pricing-features li svg { flex-shrink: 0; color: var(--primary); margin-top: 2px; }
+  .pricing-features.mini { gap: 8px; margin-bottom: 20px; }
+  .pricing-features.mini li { font-size: 0.8125rem; }
+
+  .pricing-btn { width: 100%; justify-content: center; }
+
+  /* Extra Services */
+  .extra-services { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .extra-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s;
+  }
+  .extra-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  .extra-icon {
+    width: 48px; height: 48px;
+    border-radius: var(--radius);
+    background: rgba(124,58,237,0.08);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--primary); flex-shrink: 0;
+  }
+  .extra-card h4 { margin-bottom: 6px; }
+  .extra-card p { font-size: 0.875rem; line-height: 1.6; }
+  .extra-cta { margin-top: 12px; }
+
+  /* Social Services */
+  .social-services { margin-top: 64px; }
+  .social-title { font-size: 1.5rem; text-align: center; margin-bottom: 8px; }
+  .social-subtitle { text-align: center; margin-bottom: 32px; }
+  .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+
+  .social-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: all 0.3s;
+  }
+  .social-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+  .social-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .price-note { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); }
+  .social-card h4 { font-size: 1.125rem; margin-bottom: 8px; }
+  .social-card p { font-size: 0.875rem; margin-bottom: 20px; line-height: 1.6; }
+
+  /* Print Grid */
+  .print-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+  .print-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: all 0.3s;
+  }
+  .print-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+  .print-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+  .print-card h4 { margin-bottom: 8px; }
+  .print-card p { font-size: 0.875rem; line-height: 1.6; }
+
+  .print-cta { }
+  .print-cta-inner {
+    background: linear-gradient(135deg, #f5f0ff, #fdf2f8);
+    border: 1px solid rgba(124,58,237,0.15);
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .print-cta-inner h3 { font-size: 1.5rem; margin-bottom: 10px; }
+  .print-cta-inner p { font-size: 0.9rem; max-width: 500px; }
+
+  /* CTA Banner */
+  .cta-banner {
+    padding: 80px 0;
+    background: var(--gradient);
+  }
+  .cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .cta-content h2 { color: white; font-size: clamp(1.75rem, 3vw, 2.25rem); }
+  .cta-content p { color: rgba(255,255,255,0.8); margin-top: 8px; font-size: 1.05rem; }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto 48px; }
+    .pricing-card.featured { transform: scale(1); }
+    .extra-services { grid-template-columns: 1fr; }
+    .social-grid { grid-template-columns: 1fr; max-width: 440px; }
+    .print-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .print-grid { grid-template-columns: 1fr; }
+    .print-cta-inner { flex-direction: column; padding: 32px 24px; }
+    .cta-inner { flex-direction: column; text-align: center; }
+  }
+</style>

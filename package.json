@@ -1,0 +1,16 @@
+{
+  "name": "webgraphicdesign",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "node dist/server/entry.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^10.0.3",
+    "astro": "^6.0.0"
+  }
+}

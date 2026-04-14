@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /apercu
+Disallow: /api/
+
+Sitemap: https://webgraphicdesign.fr/sitemap-index.xml
