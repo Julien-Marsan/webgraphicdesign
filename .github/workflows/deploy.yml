@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           local-dir: ./dist/
-          server-dir: public_html/
+          server-dir: domains/webgraphicdesign.fr/public_html/
           exclude: |
             **/.git*
             **/.git*/**
