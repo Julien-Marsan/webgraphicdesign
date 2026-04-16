@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="legal-inner">
         <h1>Politique de confidentialité</h1>
-        <p class="legal-date">Dernière mise à jour : mars 2026</p>
+        <p class="legal-date">Dernière mise à jour : avril 2026</p>
 
         <div class="legal-block">
           <h2>1. Responsable du traitement</h2>
@@ -25,15 +25,24 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="legal-block">
           <h2>2. Données collectées</h2>
-          <p>Dans le cadre de l'utilisation du site et de mon formulaire de contact, je suis susceptible de collecter les données suivantes :</p>
+          <p>Dans le cadre de l'utilisation du site, je suis susceptible de collecter les données suivantes :</p>
+          <h3>a) Via le formulaire de contact</h3>
           <ul>
             <li>Nom et prénom</li>
             <li>Adresse email</li>
             <li>Numéro de téléphone</li>
-            <li>Nom de votre entreprise</li>
-            <li>Message libre (description de votre projet)</li>
+            <li>Sujet et message libre (description de votre projet)</li>
+            <li>Budget estimé</li>
           </ul>
-          <p>Ces données sont collectées uniquement lorsque vous les saisissez volontairement via mon formulaire de contact.</p>
+          <p>Ces données sont collectées uniquement lorsque vous les saisissez volontairement.</p>
+          <h3>b) Via le générateur d'aperçu IA</h3>
+          <ul>
+            <li>Activité / profession saisie</li>
+            <li>Préférences de style et de palette</li>
+          </ul>
+          <p>Ces informations sont transmises à l'API Anthropic (Claude) pour générer un aperçu de maquette. Aucune donnée personnelle identifiante n'est requise pour cette fonctionnalité.</p>
+          <h3>c) Données de navigation (analytics)</h3>
+          <p>Ce site utilise <strong>Cloudflare Web Analytics</strong>, un outil d'analyse respectueux de la vie privée. Il ne dépose <strong>aucun cookie</strong>, ne collecte <strong>aucune donnée personnelle identifiante</strong> et ne suit pas les visiteurs d'un site à l'autre. Seules des données agrégées et anonymes sont collectées (pages vues, pays, appareil, source de trafic).</p>
         </div>
 
         <div class="legal-block">
@@ -62,14 +71,22 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="legal-block">
-          <h2>6. Destinataires des données</h2>
-          <p>Vos données sont destinées uniquement à WebGraphicDesign. Elles ne sont pas transmises à des tiers, sauf obligation légale ou recours à des prestataires techniques (hébergeur, outil d'emailing) qui agissent en qualité de sous-traitants et sont soumis à des obligations de confidentialité.</p>
+          <h2>6. Destinataires et sous-traitants</h2>
+          <p>Vos données sont destinées uniquement à WebGraphicDesign. Elles peuvent être transmises aux sous-traitants techniques suivants, dans le cadre strict de leurs services :</p>
+          <ul>
+            <li><strong>Formspree Inc.</strong> (États-Unis) — traitement et transmission des soumissions du formulaire de contact. <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité Formspree</a></li>
+            <li><strong>Hostinger International Ltd.</strong> (Lituanie / Chypre) — hébergement du site web</li>
+            <li><strong>Cloudflare Inc.</strong> (États-Unis) — analyse de trafic anonyme (Cloudflare Web Analytics, sans cookies ni données personnelles)</li>
+            <li><strong>Anthropic PBC</strong> (États-Unis) — traitement des requêtes du générateur d'aperçu IA (données non personnelles : activité, style, palette)</li>
+            <li><strong>Google LLC</strong> (États-Unis) — chargement des polices d'écriture (Google Fonts). Lors du chargement, votre adresse IP peut être transmise à Google. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Google</a></li>
+          </ul>
+          <p>Les transferts de données vers les États-Unis sont encadrés par le EU-US Data Privacy Framework ou les clauses contractuelles types (CCT) de la Commission européenne.</p>
         </div>
 
         <div class="legal-block">
           <h2>7. Cookies</h2>
-          <p>Ce site peut utiliser des cookies techniques nécessaires à son bon fonctionnement (navigation, préférences). Aucun cookie publicitaire ou de tracking tiers n'est déposé sans votre consentement explicite.</p>
-          <p>Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies. Cela peut toutefois affecter certaines fonctionnalités du site.</p>
+          <p>Ce site <strong>ne dépose aucun cookie</strong> de tracking, publicitaire ou analytique. L'outil d'analyse utilisé (Cloudflare Web Analytics) fonctionne sans cookies.</p>
+          <p>Seuls des cookies strictement nécessaires au fonctionnement technique du site peuvent être utilisés (gestion de session, préférences). Ils ne nécessitent pas de consentement conformément à la directive ePrivacy.</p>
         </div>
 
         <div class="legal-block">
